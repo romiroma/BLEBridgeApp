@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2035922A25460F0039B13F /* BLEBridge in Frameworks */ = {isa = PBXBuildFile; productRef = 5D2035912A25460F0039B13F /* BLEBridge */; };
 		5DABFECB2A1C16AA00650CB4 /* BLEBridgeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */; };
-		5DABFECD2A1C16AA00650CB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABFECC2A1C16AA00650CB4 /* ContentView.swift */; };
 		5DABFECF2A1C16AB00650CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */; };
 		5DABFED32A1C16AB00650CB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DABFED22A1C16AB00650CB4 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D2035902A2545EE0039B13F /* BLEBridge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BLEBridge; path = ../BLEBridge; sourceTree = "<group>"; };
 		5DABFEC72A1C16AA00650CB4 /* BLEBridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEBridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEBridgeAppApp.swift; sourceTree = "<group>"; };
-		5DABFECC2A1C16AA00650CB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DABFED02A1C16AB00650CB4 /* BLEBridgeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLEBridgeApp.entitlements; sourceTree = "<group>"; };
 		5DABFED22A1C16AB00650CB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -27,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2035922A25460F0039B13F /* BLEBridge in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +37,10 @@
 		5DABFEBE2A1C16AA00650CB4 = {
 			isa = PBXGroup;
 			children = (
+				5DABFED92A1C16D200650CB4 /* Packages */,
 				5DABFEC92A1C16AA00650CB4 /* BLEBridgeApp */,
 				5DABFEC82A1C16AA00650CB4 /* Products */,
+				5DABFEDB2A1C16EC00650CB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */,
-				5DABFECC2A1C16AA00650CB4 /* ContentView.swift */,
 				5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */,
 				5DABFED02A1C16AB00650CB4 /* BLEBridgeApp.entitlements */,
 				5DABFED12A1C16AB00650CB4 /* Preview Content */,
@@ -67,6 +69,21 @@
 				5DABFED22A1C16AB00650CB4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5DABFED92A1C16D200650CB4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				5D2035902A2545EE0039B13F /* BLEBridge */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		5DABFEDB2A1C16EC00650CB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +102,9 @@
 			dependencies = (
 			);
 			name = BLEBridgeApp;
+			packageProductDependencies = (
+				5D2035912A25460F0039B13F /* BLEBridge */,
+			);
 			productName = BLEBridgeApp;
 			productReference = 5DABFEC72A1C16AA00650CB4 /* BLEBridgeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -139,7 +159,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DABFECD2A1C16AA00650CB4 /* ContentView.swift in Sources */,
 				5DABFECB2A1C16AA00650CB4 /* BLEBridgeAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +288,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BLEBridge;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To scan and connect your BLE devices";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,10 +300,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrykevych.BLEBridgeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -307,6 +328,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = BLEBridge;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To scan and connect your BLE devices";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,10 +340,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrykevych.BLEBridgeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +377,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D2035912A25460F0039B13F /* BLEBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BLEBridge;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DABFEBF2A1C16AA00650CB4 /* Project object */;
 }
