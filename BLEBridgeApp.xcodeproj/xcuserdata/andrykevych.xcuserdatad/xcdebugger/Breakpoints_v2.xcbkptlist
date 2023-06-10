@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "03E90448-73FA-4ECF-8AD7-DA62530DB503"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "079EC5D9-8966-4EE8-B13E-ACA4ED203052"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../BLEBridge/Sources/BLEBridgeLive/Server.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "start(port:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D528F660-26E9-4086-AB77-38CCA10078E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../BLEBridge/Sources/BLEBridgeLive/Server.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "stateDidChange(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDAE516C-C07C-4517-B1E4-D089DA620B52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../BLEBridge/Sources/NetworkServer/ServerPublisher.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DDAE516C-C07C-4517-B1E4-D089DA620B52 - 1c9e04414a621f3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout NetworkServer.ServerPublisher.State, NetworkServer.ServerPublisher.Action) -&gt; ComposableArchitecture.EffectPublisher&lt;NetworkServer.ServerPublisher.Action, Swift.Never&gt; in NetworkServer.ServerPublisher.body.getter : some"
+                  moduleName = "BLEBridgeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrykevych/Projects/BLEBridge/Sources/NetworkServer/ServerPublisher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2220">
+               </Location>
+               <Location
+                  uuid = "DDAE516C-C07C-4517-B1E4-D089DA620B52 - 1c9e04414a621f3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout NetworkServer.ServerPublisher.State, NetworkServer.ServerPublisher.Action) -&gt; ComposableArchitecture.EffectPublisher&lt;NetworkServer.ServerPublisher.Action, Swift.Never&gt; in NetworkServer.ServerPublisher.body.getter : some"
+                  moduleName = "BLEBridgeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrykevych/Projects/BLEBridge/Sources/NetworkServer/ServerPublisher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "2216">
+               </Location>
+               <Location
+                  uuid = "DDAE516C-C07C-4517-B1E4-D089DA620B52 - 1c9e04414a621f5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (inout NetworkServer.ServerPublisher.State, NetworkServer.ServerPublisher.Action) -&gt; ComposableArchitecture.EffectPublisher&lt;NetworkServer.ServerPublisher.Action, Swift.Never&gt; in NetworkServer.ServerPublisher.body.getter : some"
+                  moduleName = "BLEBridgeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrykevych/Projects/BLEBridge/Sources/NetworkServer/ServerPublisher.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "2288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

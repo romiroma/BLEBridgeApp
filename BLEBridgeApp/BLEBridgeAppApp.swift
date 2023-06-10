@@ -2,6 +2,7 @@
 import BLEBridge
 import BLEBridgeLive
 import BLEBridgeUI
+import Central
 import ComposableArchitecture
 import SwiftUI
 
@@ -11,10 +12,7 @@ struct BLEBridgeAppApp: App {
     let store: StoreOf<BLEBridge> = .live()
 
     var body: some Scene {
-        WindowGroup {
 
-            BLEBridgeView(store: store)
-        }
-        .windowToolbarStyle(.unifiedCompact(showsTitle: false))
+        BLEBridgeScene(store: .live())
     }
 }
