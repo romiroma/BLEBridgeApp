@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D2035902A2545EE0039B13F /* BLEBridge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BLEBridge; path = ../BLEBridge; sourceTree = "<group>"; };
+		5D34447D2A3516520077FAA6 /* BLEBridge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BLEBridge; sourceTree = "<group>"; };
 		5DABFEC72A1C16AA00650CB4 /* BLEBridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEBridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEBridgeAppApp.swift; sourceTree = "<group>"; };
 		5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		5DABFED92A1C16D200650CB4 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				5D2035902A2545EE0039B13F /* BLEBridge */,
+				5D34447D2A3516520077FAA6 /* BLEBridge */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
