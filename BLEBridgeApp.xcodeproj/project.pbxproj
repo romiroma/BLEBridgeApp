@@ -15,6 +15,7 @@
 
 /* Begin PBXFileReference section */
 		5D34447D2A3516520077FAA6 /* BLEBridge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BLEBridge; sourceTree = "<group>"; };
+		5D3CB11D2A42375B009CCE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5DABFEC72A1C16AA00650CB4 /* BLEBridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEBridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEBridgeAppApp.swift; sourceTree = "<group>"; };
 		5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		5DABFEC92A1C16AA00650CB4 /* BLEBridgeApp */ = {
 			isa = PBXGroup;
 			children = (
+				5D3CB11D2A42375B009CCE84 /* Info.plist */,
 				5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */,
 				5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */,
 				5DABFED02A1C16AB00650CB4 /* BLEBridgeApp.entitlements */,
@@ -292,6 +294,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BLEBridgeApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BLEBridge;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To scan and connect your BLE devices";
@@ -339,6 +342,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BLEBridgeApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BLEBridge;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To scan and connect your BLE devices";
