@@ -128,7 +128,7 @@
 			};
 			buildConfigurationList = 5DABFEC22A1C16AA00650CB4 /* Build configuration list for PBXProject "BLEBridgeApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = uk;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
