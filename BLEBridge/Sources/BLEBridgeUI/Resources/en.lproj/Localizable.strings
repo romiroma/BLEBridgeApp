@@ -1,0 +1,14 @@
+"authorization_view.denied.title" = "Please allow BLEBridge App to use Bluetooth";
+"central_view.powered_off.title" = "Enable bluetooth to work with this app";
+"log.ble_to_bridge.title" = "BLE to bridge:";
+"log.bridge_to_ble.title" = "Bridge to BLE:";
+"peripheral_list_item_view.title" = "<no name>";
+"peripheral_view.toolbar.services.title" = "Services";
+ "publish.button.title.start" = "Start";
+"publish.button.title.stop" = "Stop";
+"scan_toggle_view.title.idle" = "Scan";
+"scan_toggle_view.title.running" = "Scanning";
+"scan_toggle_view.title.starting" = "Scanning...";
+"scan_toggle_view.title.stopping" = "Scanning...";
+"server_view.publish.tcp_port.title" = "TCP Port";
+"service_view.toolbar.characteristics.title" = "Characteristics";

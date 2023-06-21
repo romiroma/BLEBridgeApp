@@ -1,0 +1,14 @@
+"authorization_view.denied.title" = "Дозвольте застосунку використовувати Bluetooth";
+"central_view.powered_off.title" = "Увімкніть bluetooth щоб працювати із застосунком";
+"log.ble_to_bridge.title" = "Передано від BLE";
+"log.bridge_to_ble.title" = "Передано до BLE";
+"peripheral_list_item_view.title" = "<без імені>";
+"peripheral_view.toolbar.services.title" = "Сервіси";
+"publish.button.title.start" = "Почати";
+"publish.button.title.stop" = "Зупинити";
+"scan_toggle_view.title.idle" = "Почати виявлення";
+"scan_toggle_view.title.running" = "Виявляю";
+"scan_toggle_view.title.starting" = "Починаю виявлення";
+"scan_toggle_view.title.stopping" = "Завершую виявлення";
+"server_view.publish.tcp_port.title" = "порт TCP";
+"service_view.toolbar.characteristics.title" = "Характеристики";
