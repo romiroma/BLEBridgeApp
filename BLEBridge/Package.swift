@@ -13,7 +13,7 @@ let package = Package(
             targets: ["BLEBridge", "BLEBridgeLive", "BLEBridgeUI"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", exact: "0.53.2")
+        .package(url: "https://github.com/pointfreeco/swift-composable-architecture.git", exact: "0.54.1")
     ],
     targets: [
         .target(
