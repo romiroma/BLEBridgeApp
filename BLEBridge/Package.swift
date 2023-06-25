@@ -55,9 +55,6 @@ let package = Package(
                 .targetItem(name: "NetworkPublisher", condition: .none),
                 .targetItem(name: "BLEPublish", condition: .none),
                 .targetItem(name: "BLEBridge", condition: .none)
-            ],
-            resources: [
-                .process("Resources/Localizable.xcstrings")
             ]
         ),
         .testTarget(

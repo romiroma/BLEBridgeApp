@@ -12,7 +12,10 @@ extension DependencyValues {
     static let bluetoothQueue = DispatchQueue(label: "com.BLEBridgeLive.queue", qos: .utility)
     static let cbCentralManager = CBCentralManager(delegate: centralManagerDelegate,
                                                    queue: bluetoothQueue,
-                                                   options: [CBCentralManagerOptionShowPowerAlertKey: 1])
+                                                   options: [
+                                                    CBCentralManagerOptionShowPowerAlertKey: 1,
+                                                    CBCentralManagerOptionRestoreIdentifierKey: "BLEBridge"
+                                                   ])
     static let centralManagerDelegate = CentralManagerDelegate()
     static let authorization = AuthorizationProviderImpl()
     static let serviceDiscoverer = ServiceDiscovererImpl(peripheralStorage: DependencyValues.peripheralStorage,

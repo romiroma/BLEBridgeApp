@@ -10,5 +10,5 @@
 "scan_toggle_view.title.running" = "Виявляю";
 "scan_toggle_view.title.starting" = "Починаю виявлення";
 "scan_toggle_view.title.stopping" = "Завершую виявлення";
-"server_view.publish.tcp_port.title" = "порт TCP";
+"server_view.publish.port.title" = "Номер порту";
 "service_view.toolbar.characteristics.title" = "Характеристики";

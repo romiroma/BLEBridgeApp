@@ -7,11 +7,11 @@ import NetworkPublisher
 
 extension DependencyValues.ServerKey: DependencyKey {
 
-    public static var liveValue: NetworkPublisher.Server = TCPServer.init()
+    public static var liveValue: NetworkPublisher.Server = Server.init()
 }
 
 @available(macOS 10.14, *)
-class TCPServer: NetworkPublisher.Server {
+class Server: NetworkPublisher.Server {
 
     enum Error: Swift.Error {
         case coudntCreatePort(UInt16)
@@ -19,13 +19,17 @@ class TCPServer: NetworkPublisher.Server {
     }
 
     private var listener: NWListener?
+    private var publishProtocol: NetworkPublisher.ServerPublisher.PublishProtocol?
     private var connection: NWConnection?
     private var cancellables = Set<AnyCancellable>()
 
     let input: PassthroughSubject<Data, Never> = .init()
     private let output: PassthroughSubject<Data, Swift.Never> = .init()
 
-    func start(port: UInt16) throws -> AnyPublisher<Data, Swift.Never> {
+    func start(
+        _ publishProtocol: NetworkPublisher.ServerPublisher.PublishProtocol,
+        port: UInt16
+    ) throws -> AnyPublisher<Data, Swift.Never> {
         print("Server starting...")
 
         guard let port = NWEndpoint.Port.init(rawValue: port) else {
@@ -34,13 +38,13 @@ class TCPServer: NetworkPublisher.Server {
 
         let listener: NWListener
         do {
-            listener = try NWListener(using: .tcp, on: port)
+            listener = try NWListener(using: .parameters(using: publishProtocol), on: port)
         } catch {
             throw Error.couldntCreateListener(error)
         }
 
         setupListener(listener)
-
+        self.publishProtocol = publishProtocol
         input.sink(receiveValue: { [unowned self] data in
 
             guard let connection,
@@ -153,9 +157,22 @@ class TCPServer: NetworkPublisher.Server {
                 self.output.send(content)
             }
 
-            if !isComplete, let connection {
+            if self.publishProtocol == .udp || !isComplete, let connection {
                 self.receive(connection)
             }
+        }
+    }
+}
+
+extension NWParameters {
+
+    static func parameters(using publishProtocol: NetworkPublisher.ServerPublisher.PublishProtocol) -> NWParameters {
+
+        switch publishProtocol {
+        case .tcp:
+            return .tcp
+        case .udp:
+            return .udp
         }
     }
 }

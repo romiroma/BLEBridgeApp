@@ -2,6 +2,7 @@
 import Combine
 import ComposableArchitecture
 import Foundation
+import Network
 
 public struct ServerPublisher: ReducerProtocol {
 
@@ -12,11 +13,22 @@ public struct ServerPublisher: ReducerProtocol {
 
     }
 
+    public enum PublishProtocol: String, CaseIterable, Identifiable, Codable {
+        
+        public var id: String {
+            self.rawValue
+        }
+
+        case tcp
+        case udp
+    }
+
     public struct State: Equatable {
 
         public var port: Result<UInt16, PortError>? = .success(40404)
         public var isRunning: Bool = false
-
+        public var publishProtocol: PublishProtocol = .tcp
+        public var publishProtocols: [PublishProtocol] = PublishProtocol.allCases
         public init() {
             
         }
@@ -32,6 +44,7 @@ public struct ServerPublisher: ReducerProtocol {
         case didStop
         case BLEToBridge(Data)
         case bridgeToBLE(Data)
+        case setProtocol(PublishProtocol)
     }
 
     public enum PortError: Swift.Error, Equatable {
@@ -55,6 +68,7 @@ public struct ServerPublisher: ReducerProtocol {
                 guard case .success(let port) = state.port else {
                     break
                 }
+                let networkParameters = state.publishProtocol
 
                 return EffectTask.merge(
                     EffectTask.run {
@@ -62,7 +76,7 @@ public struct ServerPublisher: ReducerProtocol {
                     },
                     EffectTask.publisher {
                         do {
-                            return try server.start(port: port)
+                            return try server.start(networkParameters, port: port)
                                 .map(Action.bridgeToBLE)
                                 .eraseToAnyPublisher()
                                 .receive(on: mainQueue)
@@ -94,6 +108,8 @@ public struct ServerPublisher: ReducerProtocol {
                 state.isRunning = false
             case .startFailure:
                 state.isRunning = false
+            case .setProtocol(let publishProtocol):
+                state.publishProtocol = publishProtocol
             default:
                 break
             }
@@ -112,7 +128,7 @@ private extension UInt16 {
 public protocol Server {
 
     var input: PassthroughSubject<Data, Never> { get }
-    func start(port: UInt16) throws -> AnyPublisher<Data, Never>
+    func start(_ publishProtocol: ServerPublisher.PublishProtocol, port: UInt16) throws -> AnyPublisher<Data, Never>
     func stop()
 }
 
@@ -138,7 +154,7 @@ struct ServerMock: Server {
 
     var input: PassthroughSubject<Data, Never> = .init()
 
-    func start(port: UInt16) -> AnyPublisher<Data, Never> {
+    func start(_ publishProtocol: ServerPublisher.PublishProtocol, port: UInt16) -> AnyPublisher<Data, Never> {
         return PassthroughSubject<Data, Never>()
             .eraseToAnyPublisher()
     }

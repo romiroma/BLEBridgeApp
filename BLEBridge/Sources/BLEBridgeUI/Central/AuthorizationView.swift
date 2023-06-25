@@ -19,8 +19,6 @@ struct AuthorizationView: View {
                         .font(.headline)
                     Spacer()
                         .frame(height: 8)
-                    Text("authorization_view.not_determined.title".localized())
-                    Spacer()
                 }
             case .allowedAlways:
                 EmptyView()

@@ -96,9 +96,9 @@ public struct BLEBridge: ReducerProtocol {
                     .central(.discover(.selectedPeripheral(.write(data))))
                 )
             case .publish(.server(.didStop)):
-                return .send(
-                    .central(.discover(.selectedPeripheral(.stopDataExchange)))
-                )
+                return .send(.central(.discover(.selectedPeripheral(.stopDataExchange))))
+            case .central(.stateUpdate(.poweredOn)):
+                state.publish = nil
             default:
                 break
             }
@@ -136,6 +136,8 @@ struct ForwardToPublish: ReducerProtocol {
                     break
                 }
                 return .send(.publish(.peripheral(action)))
+            case .central(.stateUpdate(.poweredOff)):
+                return .send(.publish(.server(.stop)))
             default:
                 break
             }

@@ -121,6 +121,10 @@ extension ClientImpl: CBPeripheralDelegate {
                   characteristic.id == self.txID else {
                 return
             }
+
+            if let error {
+                print("write error", error)
+            }
         }
 
     func peripheral(

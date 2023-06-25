@@ -96,7 +96,8 @@ class PeripheralManagerImpl: NSObject, PeripheralManager, CBPeripheralDelegate {
             .autoconnect()
             .receive(on: bluetoothQueue)
             .handleEvents(receiveOutput: { [weak peripheral = peripheralStorage[id]] _ in
-                peripheral?.readRSSI()
+                guard let peripheral, peripheral.state == .connected else { return }
+                peripheral.readRSSI()
             })
             .combineLatest(rssiPublisher(id: id))
             .map { $1 }

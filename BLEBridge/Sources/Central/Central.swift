@@ -59,6 +59,24 @@ public struct Central: ReducerProtocol {
                 case .unauthorized:
                     state = .authorization(.denied)
                     return .none
+                case .poweredOff:
+                    var effects = [EffectTask<Action>]()
+                    switch state {
+                    case .discover(let state):
+                        for peripheral in state.peripherals where peripheral.connection == .connected {
+                            effects.append(
+                                .send(
+                                    .discover(
+                                        .peripheral(id: peripheral.id,
+                                                    action: .connection(.disconnect))
+                                    )
+                                )
+                            )
+                        }
+                    default:
+                        break
+                    }
+                    return EffectTask.concatenate(effects)
                 default:
                     state = .init(stateUpdate)
                     return .none

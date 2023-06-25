@@ -10,5 +10,5 @@
 "scan_toggle_view.title.running" = "Scanning";
 "scan_toggle_view.title.starting" = "Scanning...";
 "scan_toggle_view.title.stopping" = "Scanning...";
-"server_view.publish.tcp_port.title" = "TCP Port";
+"server_view.publish.port.title" = "Port number";
 "service_view.toolbar.characteristics.title" = "Characteristics";

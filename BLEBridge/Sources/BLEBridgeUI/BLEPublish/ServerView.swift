@@ -13,7 +13,22 @@ struct ServerView: View {
             HStack {
                 VStack {
                     HStack {
-                        Text("server_view.publish.tcp_port.title".localized())
+                        Picker(
+                            "",
+                            selection: viewStore.binding(
+                                get: \.publishProtocol,
+                                send: {
+                                    .setProtocol($0)
+                                }
+                            )
+                        ) {
+                            ForEach(viewStore.publishProtocols) { publishProtocol in
+                                Text(publishProtocol.title).tag(publishProtocol)
+                            }
+                        }
+                        .pickerStyle(.radioGroup)
+                        Spacer()
+                        Text("server_view.publish.port.title".localized())
                         TextField(
                             "",
                             text: viewStore.binding(
@@ -23,6 +38,7 @@ struct ServerView: View {
                             prompt: Text("1-65535")
                         )
                     }
+                    .disabled(viewStore.isRunning)
                     if let error = viewStore.error {
                         Text(error)
                             .foregroundColor(Color.red)
@@ -51,10 +67,12 @@ private extension ServerView {
 
     struct ViewState: Equatable {
 
-        var port: String
-        var error: String?
-        var isButtonEnabled: Bool
-        var isRunning: Bool
+        let port: String
+        let error: String?
+        let isButtonEnabled: Bool
+        let isRunning: Bool
+        let publishProtocol: ServerPublisher.PublishProtocol
+        let publishProtocols: [ServerPublisher.PublishProtocol]
 
         init(_ state: ServerPublisher.State) {
 
@@ -69,6 +87,8 @@ private extension ServerView {
                 self.port = ""
                 self.error = nil
             }
+            publishProtocol = state.publishProtocol
+            publishProtocols = state.publishProtocols
             isButtonEnabled = error == nil && !port.isEmpty
             isRunning = state.isRunning
         }
@@ -84,6 +104,18 @@ extension ServerPublisher.PortError: LocalizedError {
             return "Value \"\(value)\" out of range (1-65535)"
         case .wrongPortInput(let input):
             return "Value \"\(input)\" is not valid port number"
+        }
+    }
+}
+
+extension ServerPublisher.PublishProtocol {
+
+    var title: String {
+        switch self {
+        case .tcp:
+            return "TCP"
+        case .udp:
+            return "UDP"
         }
     }
 }
