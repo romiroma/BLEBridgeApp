@@ -13,13 +13,13 @@ BLEBridge App doesn't collect any personal data
 
 ## Next
 
-- Saving presents for frequently used devices
-- Autoconnect on start
+- Saving presets for frequently used devices
+- Autoconnect on application start
 - UDP passive (aka client) connection mode
 - More service characteristics (`Read`, `Write`) to use for bridging
-- Bridging BLE device to serial port.
+- Bridging BLE device to serial port. (version 0.1)
 
 
 ## Feature Request
 
-To Request
+To Request a feature or submit a bug, [create New Issue](https://github.com/romiroma/BLEBridgeApp/issues/new)
