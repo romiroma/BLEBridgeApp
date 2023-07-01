@@ -8,22 +8,68 @@
 
 /* Begin PBXBuildFile section */
 		5D2035922A25460F0039B13F /* BLEBridge in Frameworks */ = {isa = PBXBuildFile; productRef = 5D2035912A25460F0039B13F /* BLEBridge */; };
+		5D5BAC872A4A63B90005E79D /* com.andrykevych.BLEBridge.BLESerial.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 5D81481D2A4A48BD00A0B87E /* com.andrykevych.BLEBridge.BLESerial.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5D81481F2A4A48BD00A0B87E /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D81481E2A4A48BD00A0B87E /* DriverKit.framework */; };
+		5D8148222A4A48BD00A0B87E /* BLESerial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5D8148212A4A48BD00A0B87E /* BLESerial.cpp */; };
+		5D8148242A4A48BD00A0B87E /* BLESerial.iig in Sources */ = {isa = PBXBuildFile; fileRef = 5D8148232A4A48BD00A0B87E /* BLESerial.iig */; };
 		5DABFECB2A1C16AA00650CB4 /* BLEBridgeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */; };
 		5DABFECF2A1C16AB00650CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */; };
 		5DABFED32A1C16AB00650CB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DABFED22A1C16AB00650CB4 /* Preview Assets.xcassets */; };
+		5DCC23232A50A0F000DD5097 /* SerialDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCC23222A50A0F000DD5097 /* SerialDriverKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D5BAC882A4A63B90005E79D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DABFEBF2A1C16AA00650CB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D81481C2A4A48BD00A0B87E;
+			remoteInfo = BLESerial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5D5BAC8A2A4A63B90005E79D /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				5D5BAC872A4A63B90005E79D /* com.andrykevych.BLEBridge.BLESerial.dext in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5D34447D2A3516520077FAA6 /* BLEBridge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BLEBridge; sourceTree = "<group>"; };
 		5D3CB11D2A42375B009CCE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5D77EEC52A4A53BC00586607 /* BLEBridgeAppDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLEBridgeAppDebug.entitlements; sourceTree = "<group>"; };
+		5D81481D2A4A48BD00A0B87E /* com.andrykevych.BLEBridge.BLESerial.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = com.andrykevych.BLEBridge.BLESerial.dext; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D81481E2A4A48BD00A0B87E /* DriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DriverKit.framework; path = System/Library/Frameworks/DriverKit.framework; sourceTree = SDKROOT; };
+		5D8148212A4A48BD00A0B87E /* BLESerial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BLESerial.cpp; sourceTree = "<group>"; };
+		5D8148232A4A48BD00A0B87E /* BLESerial.iig */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.iig; path = BLESerial.iig; sourceTree = "<group>"; };
+		5D8148252A4A48BD00A0B87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D81482D2A4A48F000A0B87E /* BLESerial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLESerial.entitlements; sourceTree = "<group>"; };
 		5DABFEC72A1C16AA00650CB4 /* BLEBridgeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEBridgeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEBridgeAppApp.swift; sourceTree = "<group>"; };
 		5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DABFED02A1C16AB00650CB4 /* BLEBridgeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BLEBridgeApp.entitlements; sourceTree = "<group>"; };
 		5DABFED22A1C16AB00650CB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5DCC23222A50A0F000DD5097 /* SerialDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SerialDriverKit.framework; path = Platforms/DriverKit.platform/Developer/SDKs/DriverKit.sdk/System/DriverKit/System/Library/Frameworks/SerialDriverKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5D81481A2A4A48BD00A0B87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D81481F2A4A48BD00A0B87E /* DriverKit.framework in Frameworks */,
+				5DCC23232A50A0F000DD5097 /* SerialDriverKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DABFEC42A1C16AA00650CB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,11 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D8148202A4A48BD00A0B87E /* BLESerial */ = {
+			isa = PBXGroup;
+			children = (
+				5D81482D2A4A48F000A0B87E /* BLESerial.entitlements */,
+				5D8148212A4A48BD00A0B87E /* BLESerial.cpp */,
+				5D8148232A4A48BD00A0B87E /* BLESerial.iig */,
+				5D8148252A4A48BD00A0B87E /* Info.plist */,
+			);
+			path = BLESerial;
+			sourceTree = "<group>";
+		};
 		5DABFEBE2A1C16AA00650CB4 = {
 			isa = PBXGroup;
 			children = (
 				5DABFED92A1C16D200650CB4 /* Packages */,
 				5DABFEC92A1C16AA00650CB4 /* BLEBridgeApp */,
+				5D8148202A4A48BD00A0B87E /* BLESerial */,
 				5DABFEC82A1C16AA00650CB4 /* Products */,
 				5DABFEDB2A1C16EC00650CB4 /* Frameworks */,
 			);
@@ -49,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5DABFEC72A1C16AA00650CB4 /* BLEBridgeApp.app */,
+				5D81481D2A4A48BD00A0B87E /* com.andrykevych.BLEBridge.BLESerial.dext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +119,7 @@
 				5DABFECA2A1C16AA00650CB4 /* BLEBridgeAppApp.swift */,
 				5DABFECE2A1C16AB00650CB4 /* Assets.xcassets */,
 				5DABFED02A1C16AB00650CB4 /* BLEBridgeApp.entitlements */,
+				5D77EEC52A4A53BC00586607 /* BLEBridgeAppDebug.entitlements */,
 				5DABFED12A1C16AB00650CB4 /* Preview Content */,
 			);
 			path = BLEBridgeApp;
@@ -84,13 +144,43 @@
 		5DABFEDB2A1C16EC00650CB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DCC23222A50A0F000DD5097 /* SerialDriverKit.framework */,
+				5D81481E2A4A48BD00A0B87E /* DriverKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5D8148182A4A48BD00A0B87E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		5D81481C2A4A48BD00A0B87E /* BLESerial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D81482C2A4A48BD00A0B87E /* Build configuration list for PBXNativeTarget "BLESerial" */;
+			buildPhases = (
+				5D8148182A4A48BD00A0B87E /* Headers */,
+				5D8148192A4A48BD00A0B87E /* Sources */,
+				5D81481A2A4A48BD00A0B87E /* Frameworks */,
+				5D81481B2A4A48BD00A0B87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLESerial;
+			productName = BLESerial;
+			productReference = 5D81481D2A4A48BD00A0B87E /* com.andrykevych.BLEBridge.BLESerial.dext */;
+			productType = "com.apple.product-type.driver-extension";
+		};
 		5DABFEC62A1C16AA00650CB4 /* BLEBridgeApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DABFED62A1C16AB00650CB4 /* Build configuration list for PBXNativeTarget "BLEBridgeApp" */;
@@ -98,10 +188,12 @@
 				5DABFEC32A1C16AA00650CB4 /* Sources */,
 				5DABFEC42A1C16AA00650CB4 /* Frameworks */,
 				5DABFEC52A1C16AA00650CB4 /* Resources */,
+				5D5BAC8A2A4A63B90005E79D /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5D5BAC892A4A63B90005E79D /* PBXTargetDependency */,
 			);
 			name = BLEBridgeApp;
 			packageProductDependencies = (
@@ -121,6 +213,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					5D81481C2A4A48BD00A0B87E = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					5DABFEC62A1C16AA00650CB4 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -140,11 +235,19 @@
 			projectRoot = "";
 			targets = (
 				5DABFEC62A1C16AA00650CB4 /* BLEBridgeApp */,
+				5D81481C2A4A48BD00A0B87E /* BLESerial */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5D81481B2A4A48BD00A0B87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DABFEC52A1C16AA00650CB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +260,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5D8148192A4A48BD00A0B87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D8148242A4A48BD00A0B87E /* BLESerial.iig in Sources */,
+				5D8148222A4A48BD00A0B87E /* BLESerial.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5DABFEC32A1C16AA00650CB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +279,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5D5BAC892A4A63B90005E79D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D81481C2A4A48BD00A0B87E /* BLESerial */;
+			targetProxy = 5D5BAC882A4A63B90005E79D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5D81482A2A4A48BD00A0B87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = BLESerial/BLESerial.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=driverkit*]" = 6CX35BBHC2;
+				DRIVERKIT_DEPLOYMENT_TARGET = 21.0;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BLESerial/Info.plist;
+				INFOPLIST_KEY_OSBundleUsageDescription = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrykevych.BLEBridge.BLESerial;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=driverkit*]" = "BLEBridge BLESerial Mac Development";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		5D81482B2A4A48BD00A0B87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_ENTITLEMENTS = BLESerial/BLESerial.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6CX35BBHC2;
+				DRIVERKIT_DEPLOYMENT_TARGET = 21.0;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BLESerial/Info.plist;
+				INFOPLIST_KEY_OSBundleUsageDescription = "";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrykevych.BLEBridge.BLESerial;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = driverkit;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 		5DABFED42A1C16AB00650CB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,12 +465,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = BLEBridgeApp/BLEBridgeApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BLEBridgeApp/BLEBridgeAppDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 6CX35BBHC2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 6CX35BBHC2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -316,6 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrykevych.BLEBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "BLEBridge Mac Development";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
@@ -364,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrykevych.BLEBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = BLEBridgeProfile;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "Mac BLEBridge Distribution";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
@@ -377,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5D81482C2A4A48BD00A0B87E /* Build configuration list for PBXNativeTarget "BLESerial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D81482A2A4A48BD00A0B87E /* Debug */,
+				5D81482B2A4A48BD00A0B87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5DABFEC22A1C16AA00650CB4 /* Build configuration list for PBXProject "BLEBridgeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

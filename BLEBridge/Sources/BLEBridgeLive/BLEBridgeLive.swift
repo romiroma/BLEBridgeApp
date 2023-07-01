@@ -13,8 +13,7 @@ extension DependencyValues {
     static let cbCentralManager = CBCentralManager(delegate: centralManagerDelegate,
                                                    queue: bluetoothQueue,
                                                    options: [
-                                                    CBCentralManagerOptionShowPowerAlertKey: 1,
-                                                    CBCentralManagerOptionRestoreIdentifierKey: "BLEBridge"
+                                                    CBCentralManagerOptionShowPowerAlertKey: 1
                                                    ])
     static let centralManagerDelegate = CentralManagerDelegate()
     static let authorization = AuthorizationProviderImpl()
